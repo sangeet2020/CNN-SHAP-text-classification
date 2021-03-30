@@ -5,8 +5,8 @@ def parse_arguments():
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("-emb_f",           default='wiki-news-300d-1M.vec', type=str, help="path to pre-trained fastext embeddings (*.vec file)")
-    parser.add_argument("-out_dir",         default='models', type=str, help="path to save trained model")
-    parser.add_argument("-results_dir",     default='results', type=str, help="path to save training plots")
+    parser.add_argument("-out_dir",         default='models', type=str, help="path to save trained model [default: models]")
+    parser.add_argument("-results_dir",     default='results', type=str, help="path to save training plots [default: results]")
     parser.add_argument("-learning_rate",   default=1e-3, type=float, help='learning rate [default: 0.001]')
     parser.add_argument("-epochs",          default=10, type=int, help='number of training epochs [default: 10]')
     parser.add_argument("-dropout",         default=0.25, type=float, help='the probability for dropout [default: 0.25]')

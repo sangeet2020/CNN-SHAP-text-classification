@@ -13,6 +13,7 @@ Local model explanation using the SHAP DeepExplainer class.
 
 import os
 import sys
+import time
 import argparse
 import numpy as np
 
@@ -23,14 +24,16 @@ import torch
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
-from main import prepare_data
+
 import matplotlib.pyplot as plt
 
 
 def main():
     """ main method """
     args = parse_arguments()
+    start = time.time()
     os.makedirs(args.results_dir, exist_ok=True)
+    from main import prepare_data
     data, t_words, target2id = prepare_data()
     
     ## Load model
@@ -50,7 +53,7 @@ def main():
     
     plt.figure()
     shap.summary_plot(shap_values, feature_names = list(num2word.values()), class_names = list(target2id.keys()), show=False)
-    plt.savefig(args.results_dir + ' /1-summary_plot.pdf', format='pdf', dpi=1200)
+    plt.savefig(args.results_dir + '/1-summary_plot.pdf', format='pdf', dpi=1200)
     plt.close()
     
     ## Deep Exaplainer
@@ -106,6 +109,8 @@ def main():
     # y center value is base rate for the given background data
     f = shap.force_plot(kernel_explainer.expected_value[class_num], kernel_shap_values[class_num], x_test_words[:10])
     shap.save_html(args.results_dir + "/4-output_expectation_for_gven_class.htm", f)
+    end = time.time()
+    print("Total runtime: {:.2f} s".format(end-start))
 
 def parse_arguments():
     """ parse arguments """

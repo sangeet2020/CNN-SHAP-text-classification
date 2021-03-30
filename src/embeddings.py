@@ -15,8 +15,7 @@ import os
 import sys
 import argparse
 import numpy as np
-import torch.nn as nn
-import torch
+
 from gensim.models import KeyedVectors
 from arguments import parse_arguments
 
