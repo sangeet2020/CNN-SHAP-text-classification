@@ -42,7 +42,11 @@ The [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/) is collection of appr
 ```
 
 ## Getting started
--   **Help**: for instructions on how to run the script with appropriate arguments.
+-   **Help**: for instructions on how download pre-trained embeddings and  run the script with appropriate arguments. 
+    ```
+    wget  https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip
+    ```
+    Now, run train the model
     ```
     python src/main.py --help
     usage: main.py [-h] 
