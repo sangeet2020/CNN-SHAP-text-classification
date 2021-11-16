@@ -26,8 +26,8 @@ class TextClassifier(object):
         self.dropout = params.dropout
         
         # Load pre-saved npy weight matrix
-        embedding_matrix = np.load('models/embedding_weights.npy')
-        # embedding_matrix = MyEmbedding(params).load_embeddings(self.t_words)
+        # embedding_matrix = np.load('models/embedding_weights.npy')
+        embedding_matrix = MyEmbedding(params).load_embeddings(self.t_words)
         
         self.embedding_layer = Embedding(len(self.t_words.word_index) + 1,
                                         self.embedding_size,

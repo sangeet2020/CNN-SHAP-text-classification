@@ -1,12 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-# @Author: Sangeet Sagar
-# @Date:   2021-02-23 01:52:54
-# @Email:  sasa00001@stud.uni-saarland.de
-# @Organization: Universität des Saarlandes
-# @Last Modified time: 2021-03-18 01:32:15
-
 """
 Local model explanation using the SHAP DeepExplainer class.
 """

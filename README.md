@@ -1,9 +1,6 @@
 # CNN-SHAP-text-classification
 A CNN based framework for text classification problem implemented in Keras with a local model explanation using SHAP DeepExplainer class.
 
-## Description
-TODO
-
 
 ## Requirements
 1.  keras: `2.4.3`
@@ -99,13 +96,12 @@ The [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/) is collection of appr
 
 
 ## Runtime
--   Training and evaluation- xx s
--   Explanability- xx s
+-   Training and evaluation- 400 s
+-   Explanability- 3067 s
 
 
 ## Results
-While all results and plots can be found in `results/`, here are some important results worth discussing.
--   TODO
+All results and plots can be found in `results/`.
 
 
 ## References
